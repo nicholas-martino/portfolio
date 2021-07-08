@@ -13,6 +13,7 @@ Markdown==3.3.4
 packaging==20.9
 psycopg2==2.8.5
 pyparsing==2.4.7
+python-dotenv==0.18.0
 pytz==2020.1
 shortuuid==1.0.1
 six==1.16.0
