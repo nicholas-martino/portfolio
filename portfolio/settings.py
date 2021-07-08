@@ -26,7 +26,7 @@ SECRET_KEY = 'fzmkz%7bux&ezb*##hq6imm%f)0bg3+m@8_)(^&e$+c43cdtxc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nicholasmartino.herokuapp.com', 'nicholasmartino.com']
 
 
 # Application definition
@@ -133,5 +133,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+WHITENOISE_USE_FINDERS = True
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 django_heroku.settings(locals())
