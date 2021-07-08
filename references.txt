@@ -1,0 +1,5 @@
+Deploy django project on Heroku
+https://codeburst.io/deploy-your-django-project-for-free-140d73a2c76b
+
+Migrate SQLite to PostgresSQL
+https://studygyaan.com/django/migrate-data-from-sqlite-to-postgresql-in-django
