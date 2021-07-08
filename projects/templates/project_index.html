@@ -1,0 +1,26 @@
+<!--{% extends "base.html" %}-->
+<!--{% load static %}-->
+<!--{% block page_content %}-->
+<!--<h1>Projects</h1>-->
+<!--<div class="row">-->
+<!--{% for project in projects %}-->
+<!--    <div class="col-lg-4 col-md-6 portfolio-item filter-web">-->
+<!--        <div class="portfolio-wrap">-->
+<!--            <img class="card-img-top" src="{% static project.image %}">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title">{{ project.title }}</h5>-->
+<!--                <p class="card-text">{{ project.description|safe }}</p>-->
+<!--                <a href="{% url 'project_detail' project.pk %}"-->
+<!--                   class="btn btn-primary">-->
+<!--                    Read More-->
+<!--                </a>-->
+<!--                <a href="{{project.code}}" target="_blank"-->
+<!--                   class="btn btn-primary">-->
+<!--                    Code-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    {% endfor %}-->
+<!--</div>-->
+<!--{% endblock %}-->
