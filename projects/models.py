@@ -26,6 +26,6 @@ class Project(models.Model):
 	technologies = MultiSelectField(choices=TECHS, default=(('python', 'Python')))
 	code = models.URLField(default="https://github.com/nicholas-martino")
 	filter = models.CharField(default='filter-cd', max_length=30)
-
+	publish = models.BooleanField(default=True)
 	def __str__(self):
 		return f"{self.title}"
