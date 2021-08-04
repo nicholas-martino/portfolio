@@ -190,6 +190,7 @@
               <img src="{% static project.image %}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>{{project.title}}</h4>
+                <p>{{project.date}}<p>
                 <div class="portfolio-links">
                   <a href="{% url 'project_detail' project.pk %}" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
                   {% if project.code %}
