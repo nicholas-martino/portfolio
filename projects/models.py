@@ -24,8 +24,9 @@ class Project(models.Model):
 	date = models.DateField()
 	image = models.FilePathField(path="static/img")
 	technologies = MultiSelectField(choices=TECHS, default=(('python', 'Python')))
-	code = models.URLField(default="https://github.com/nicholas-martino")
+	code = models.URLField(null=True, blank=True)
 	filter = models.CharField(default='filter-cd', max_length=30)
 	publish = models.BooleanField(default=True)
+
 	def __str__(self):
 		return f"{self.title}"
