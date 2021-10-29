@@ -133,7 +133,7 @@ USE_L10N = True
 USE_TZ = True
 
 urlpatterns = [
-    path("favicon.png"), RedirectView.as_view(url=staticfiles_storage.url("favicon.png"))
+    path("favicon.png", RedirectView.as_view(url=staticfiles_storage.url("favicon.png")))
 ]
 
 # Static files (CSS, JavaScript, Images)
