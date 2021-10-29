@@ -13,7 +13,12 @@ import os
 import dj_database_url
 import dotenv
 import django_heroku
+from django.views.generic.base import RedirectView
+from django.contrib.staticfiles.storage import staticfiles_storage
+
 from pathlib import Path
+from django.urls import include, path
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = Path(__file__).resolve().parent.parent
@@ -88,12 +93,12 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': f'{BASE_DIR}/db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': f'{BASE_DIR}/db.sqlite3',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -127,6 +132,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+urlpatterns = [
+    path("favicon.png"), RedirectView.as_view(url=staticfiles_storage.url("favicon.png"))
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
