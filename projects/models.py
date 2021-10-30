@@ -24,6 +24,7 @@ class Project(models.Model):
 	date = models.DateField()
 	image = models.FilePathField(path="static/img")
 	technologies = MultiSelectField(choices=TECHS, default=(('python', 'Python')))
+	link = models.URLField(null=True, blank=True)
 	code = models.URLField(null=True, blank=True)
 	filter = models.CharField(default='filter-cd', max_length=30)
 	publish = models.BooleanField(default=True)
