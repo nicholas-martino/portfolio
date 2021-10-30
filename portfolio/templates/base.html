@@ -152,8 +152,7 @@
                 <h4 >{{project.title}}</h4>
                 <p>{{project.date}}<p>
                 <div class="portfolio-links">
-<!--                  <a href="{% url 'project_detail' project.pk %}" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>-->
-
+                  <a href="{% url 'project_detail' project.pk %}" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
                   {% if project.code %}
                   <a href="{{project.code}}" target="_blank" data-glightbox="type: external" title="Project Details"><i class="bx bx-link"></i></a>
                   {% endif %}
