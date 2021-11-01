@@ -144,7 +144,7 @@
           <div class="row">
           {% for project in projects %}
             {% if project.publish %}
-            <a href="{{project.link}}">
+            <a href="{{project.link}}" target="_blank">
             <div class="col-lg-4 col-md-6 portfolio-item {{project.filter}}">
             <div class="portfolio-wrap" style="border-radius: 10px" >
               <img src="{% static project.image %}" class="img-fluid" alt="">
