@@ -13,6 +13,7 @@
   <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display:400" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -33,28 +34,26 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-
-<p></p>
-<h3 class="section-title">{{ project.title }}</h3>
-<div class="row">
+<h3 class="section-title" style="font-family:DM Serif Display; font-size:54; margin-top: 50px">{{ project.title }}</h3>
+<div class="row" style="width:80vw; margin:0 auto; font-family:Charter">
     <div class="col-lg-7 col-md-7 portfolio-item filter-app" align="center">
         <img src="{% static project.image %}" alt="" width="95%">
         <p>{{ project.detailed_description|safe }}</p>
     </div>
     <div class="col-lg-5 col-md-5 portfolio-item filter-app">
         <div align="left">
-            <h6>About the project:</h6>
-            <small>{{ project.description|safe }}</small>
+            <h6 style="font-family:Helvetica; font-weight: 600; font-size:20">About the project</h6>
+            <small  style="text-align:justify; text-justify:inter-word">{{ project.description|safe }}</small>
             <br>
-            <h6>Technologies used:</h6>
+            <h6 style="font-family:Helvetica; font-weight: 600; font-size:20">Technologies</h6>
             <small>{{ project.technologies }}</small>
             <br>
             <br>
-            <h6>Project date:</h6>
+            <h6 style="font-family:Helvetica; font-weight: 600; font-size:20">Project date</h6>
             <small>{{ project.date }}</small>
         </div>
     </div>
 </div>
-<div class="row">
+<div class="row" style="width:80vw; margin:0 auto;">
     <p>{{ project.bottom_row|safe }}</p>
 </div>
