@@ -155,7 +155,6 @@
                 <h4 >{{project.title}}</h4>
                 <p>{{project.date}}<p>
                 <div class="portfolio-links">
-                  <a href="{% url 'project_detail' project.pk %}" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
                   {% if project.code %}
                   <a href="{{project.code}}" target="_blank" data-glightbox="type: external" title="Project Details"><i class="bx bx-link"></i></a>
                   {% endif %}
@@ -205,7 +204,10 @@
                 </ul>
               </div>
             </div>
-            <p>Data Scientist with 5+ years of experience in building data-driven applications. Proficient in advanced analytics, predictive modelling, data processing, data mining, and geospatial analysis. Established ability in employing algorithmic thinking to solve business problems across scales for a diversity of industries.</p>
+            <div class="row skills-content">
+              <object data="static/txt/summary.txt" type="text/plain">
+              </object>
+            </div>
           </div>
         </div>
 
@@ -259,8 +261,6 @@
 
           <div class="col-lg-6">
 
-
-
           </div>
 
         </div>
@@ -282,7 +282,7 @@
               <div class="row">
                 <div class="resume-item">
                   <h4>Nicholas Martino</h4>
-                  <p><em>Innovative and deadline-driven Computational Designer with 5+ years of experience designing and developing problem-solving algorithms.</em></p>
+                  <p><embed src="static/txt/summary.txt"></p>
                   <ul>
                     <li>Vancouver, British Columbia</li>
                     <li>+1 236 788 4287</li>
