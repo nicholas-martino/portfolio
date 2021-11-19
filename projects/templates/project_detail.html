@@ -46,17 +46,11 @@
     </div>
 </div>
 
-<div class="row" style="width:40vw; font-family:Charter; font-size:20; margin-top: 20px">
-    <div class="col-lg-7 col-md-7 portfolio-item filter-app" align="center">
-        <img src="{% static project.image %}" alt="" width="95%">
-        <p>{{ project.detailed_description|safe }}</p>
-    </div>
-    <div class="col-lg-5 col-md-5 portfolio-item filter-app">
-            <div align="left">
-            <h6 style="font-family:Helvetica; font-weight: 600; font-size:20">About the project</h6>
-            <small>{{ project.description|safe }}</small>
-        </div>
-    </div>
+<div class="row" style="width:40vw; font-family:Charter; font-size:20; margin-top: 40px">
+    <h6 style="font-family:Helvetica; font-weight: 600; font-size:20">About the project</h6>
+    <small>{{ project.description|safe }}</small>
+    <p>{{ project.detailed_description|safe }}</p>
+    <img src="{% static project.image %}" alt="" width="95%">
 </div>
 <div class="row" style="width:40vw; margin:0 auto; font-family:Charter; font-size:20">
     <p>{{ project.bottom_row|safe }}</p>
