@@ -34,26 +34,30 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-<h3 class="section-title" style="font-family:DM Serif Display; font-size:54; margin-top: 50px">{{ project.title }}</h3>
-<div class="row" style="width:80vw; margin:0 auto; font-family:Charter">
+<div class="row" style="width:40vw; margin:0 auto; margin-top: 50px">
+<h3 class="section-title" style="font-family:DM Serif Display; font-size:54">{{ project.title }}</h3>
+<div class="row">
+    <div class="col-lg-6">
+        <small style="color:gray; font-family:Helvetica">{{ project.date }}</small>
+    </div>
+        <div class="col-lg-6" align="right">
+        <small style="color:gray; font-family:Helvetica">Technologies: {{ project.technologies }}</small>
+    </div>
+</div>
+
+<div class="row" style="width:40vw; font-family:Charter; font-size:20; margin-top: 20px">
     <div class="col-lg-7 col-md-7 portfolio-item filter-app" align="center">
         <img src="{% static project.image %}" alt="" width="95%">
         <p>{{ project.detailed_description|safe }}</p>
     </div>
     <div class="col-lg-5 col-md-5 portfolio-item filter-app">
-        <div align="left">
+            <div align="left">
             <h6 style="font-family:Helvetica; font-weight: 600; font-size:20">About the project</h6>
-            <small  style="text-align:justify; text-justify:inter-word">{{ project.description|safe }}</small>
-            <br>
-            <h6 style="font-family:Helvetica; font-weight: 600; font-size:20">Technologies</h6>
-            <small>{{ project.technologies }}</small>
-            <br>
-            <br>
-            <h6 style="font-family:Helvetica; font-weight: 600; font-size:20">Project date</h6>
-            <small>{{ project.date }}</small>
+            <small>{{ project.description|safe }}</small>
         </div>
     </div>
 </div>
-<div class="row" style="width:80vw; margin:0 auto;">
+<div class="row" style="width:40vw; margin:0 auto; font-family:Charter; font-size:20">
     <p>{{ project.bottom_row|safe }}</p>
+</div>
 </div>
