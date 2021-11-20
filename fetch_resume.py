@@ -14,4 +14,8 @@ cursor = conn.cursor()
 
 sql = "SELECT * FROM d4hjtefv833vil.public.positions_position;"
 cursor.execute(sql)
-results = cursor.fetchall()
+positions = cursor.fetchall()
+
+sql = "SELECT * FROM d4hjtefv833vil.public.projects_project;"
+cursor.execute(sql)
+projects = cursor.fetchall()
