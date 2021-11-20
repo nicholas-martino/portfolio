@@ -20,7 +20,6 @@ class Project(models.Model):
 	title = models.CharField(max_length=100)
 	description = models.TextField()
 	detailed_description = models.TextField(null=True, blank=True)
-	bottom_row = models.TextField(null=True, blank=True)
 	date = models.DateField()
 	image = models.FilePathField(path="static/img")
 	technologies = MultiSelectField(choices=TECHS, default=(('python', 'Python')))
