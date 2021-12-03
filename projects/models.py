@@ -13,8 +13,14 @@ TECHS = (
 	('illustrator', 'Illustrator'),
 	('photoshop', 'Photoshop'),
 	('indesign', 'InDesign'),
-
 )
+
+FILTERS = (
+	('filter-ds', 'Data Science'),
+	('filter-gd', 'Generative Design'),
+	('filter-wd', 'Web Development')
+)
+
 
 class Project(models.Model):
 	title = models.CharField(max_length=100)
@@ -25,7 +31,7 @@ class Project(models.Model):
 	technologies = MultiSelectField(choices=TECHS, default=(('python', 'Python')))
 	link = models.URLField(null=True, blank=True)
 	code = models.URLField(null=True, blank=True)
-	filter = models.CharField(default='filter-cd', max_length=30)
+	filter = models.CharField(default='filter-gd', max_length=30)
 	publish = models.BooleanField(default=True)
 
 	def __str__(self):
