@@ -38,7 +38,11 @@ SECRET_KEY = 'fzmkz%7bux&ezb*##hq6imm%f)0bg3+m@8_)(^&e$+c43cdtxc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['nicholasmartino.herokuapp.com', 'nicholasmartino.com']
+ALLOWED_HOSTS = [
+    'nicholasmartino.herokuapp.com',
+    'nicholasmartino.com',
+    'portfolio-env.eba-5p745tap.us-west-2.elasticbeanstalk.com'
+]
 
 
 # Application definition
