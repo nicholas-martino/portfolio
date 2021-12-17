@@ -4,6 +4,10 @@ from multiselectfield import MultiSelectField
 TECHS = (
 	('qgis', 'QGIS'),
 	('python', 'Python'),
+	('js', 'JavaScript'),
+	('vue_js', 'Vue'),
+	('react_js', 'React'),
+	('mapbox', 'Mapbox-GL'),
 	('sql', 'SQL'),
 	('grasshopper', 'Grasshopper'),
 	('vray', 'V-Ray'),
