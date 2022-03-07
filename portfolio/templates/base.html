@@ -32,9 +32,9 @@
   <meta content="https://nicholasmartino.herokuapp.com/" name="url">
   <meta content="portfolio, computational design" name="keywords">
 
-  <meta property="og:title" content="Nicholas Martino"/>
-  <meta property="og:description" content="Portfolio website"/>
-  <meta property="og:image" content="https://raw.githubusercontent.com/nicholasmartino/portfolio/master/static/img/portfolio_cover.png"/>
+  <meta property="og:title" content="Nicholas Martino">
+  <meta property="og:description" content="Portfolio website">
+  <meta property="og:image" content="https://raw.githubusercontent.com/nicholasmartino/portfolio/master/static/img/portfolio_cover.png">
   <meta property="og:url" content="https://nicholasmartino.herokuapp.com/">
 
   <!-- =======================================================
@@ -58,7 +58,7 @@
         <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
         <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
         <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-        <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Awards</span></a></li>
+<!--        <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Awards</span></a></li>-->
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
       </ul>
     </nav><!-- .nav-menu -->
@@ -68,12 +68,19 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Nicholas Martino</h1>
-      <p>I'm <span class="typed" data-typed-items="Software Developer, Computational Designer, GIS Analyst"></span></p>
-      <div class="social-links">
-        <a href="https://github.com/nicholasmartino" class="github" target="_blank"><i class="bx bxl-github"></i></a>
-        <a href="https://instagram.com/nsmartino_" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/nicmartino/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+      <div class="row">
+        <div class="col-6">
+        <h1>Nicholas Martino</h1>
+        <p>I'm <span class="typed" data-typed-items="Software Developer, Computational Designer, GIS Analyst"></span></p>
+        <div class="social-links">
+          <a href="https://github.com/nicholasmartino" class="github" target="_blank"><i class="bx bxl-github"></i></a>
+          <a href="https://instagram.com/nsmartino_" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/nicmartino/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+        </div>
+        </div>
+        <div class="col-6" id="container" style="height: 30vh; width: 40vw">
+            <canvas></canvas>
+        </div>
       </div>
     </div>
   </section><!-- End Hero -->
@@ -577,7 +584,9 @@
 
   <!-- Template Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>
-
+  <script src="http://threejs.org/build/three.min.js"></script>
+  <script src="{% static 'js/cube.js' %}" type="module"></script>
+  <script src="https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/jsm/controls/OrbitControls.js"></script>
 </body>
 
 </html>
