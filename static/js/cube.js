@@ -57,22 +57,6 @@ camera.lookAt(cubeMesh.position)
 cubeMesh.position.set(0, 1, 0)
 scene.add(cubeMesh)
 
-// const controls = new THREE.OrbitControls( camera, renderer.domElement );
-//     controls.addEventListener( 'change', render );
-//     controls.minDistance = 50;
-//     controls.maxDistance = 200;
-//     controls.enablePan = false;
-//     controls.target.set( 0, 20, 0 );
-//     controls.update();
-
-const planeGeometry = new THREE.PlaneGeometry(1, 1, 1)
-const planeMaterial = new THREE.MeshPhysicalMaterial({
-    map: textureLoader.load('https://raw.githubusercontent.com/nicholasmartino/portfolio/master/static/img/portfolio_cover.jpg')
-})
-const plane = new THREE.Mesh(planeGeometry, planeMaterial)
-// plane.rotation.x = Math.PI
-// scene.add(plane)
-
 window.onresize = function () {
     camera.aspect = (container.clientWidth/2) / container.clientHeight
     camera.updateProjectionMatrix()
@@ -83,7 +67,6 @@ function animate() {
     const timer = 0.0001 * Date.now();
     requestAnimationFrame(animate)
     const delta = clock.getDelta()
-    console.log(delta)
     cubeMesh.rotation.y = timer * Math.PI
     cubeMesh.rotation.z = timer * Math.PI
     renderer.render(scene, camera)
