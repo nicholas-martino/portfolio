@@ -1,5 +1,7 @@
 {% load static %}
+<!-- Load static -->
 
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -7,10 +9,10 @@
   <title>Nicholas Martino</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-  <meta property="og:title" content="{% static project.link %}">
-  <meta property="og:description" content="{% static project.description %}">
-  <meta property="og:url" content="{% static project.link %}">
-  <meta property="og:image" content="{% static project.image %}">
+  <meta name="title" property="og:title" content="{{project.title}}">
+  <meta name="description" property="og:description" content="Project description">
+  <meta name="url" property="og:url" content="{{ project.link }}">
+  <meta name="image" property="og:image" content="https://raw.githubusercontent.com/nicholasmartino/portfolio/master/{{ project.image }}">
 
   <!-- Favicons -->
   <link href="{% static 'img/favicon.png' %}" rel="icon">
@@ -59,3 +61,4 @@
     <p>{{ project.detailed_description|safe }}</p>
 </div>
 </div>
+</html>
