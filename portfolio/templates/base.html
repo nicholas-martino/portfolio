@@ -170,7 +170,15 @@
                       <h4 >{{project.title}}</h4>
                       <p>{{project.date}}<p>
                       <div class="portfolio-links">
-                        <a href="{{project.code}}" target="_blank" data-glightbox="type: external" title="Project Details"><i class="bx bx-link"></i></a>
+                        {% if project.link != null %}
+                          <a href="{{project.link}}" target="_blank" data-glightbox="type: external" title="Details"><i class="bx bx-link"></i></a>
+                        {% endif %}
+                        {% if project.code != null %}
+                          <a href="{{project.code}}" target="_blank" data-glightbox="type: external" title="GitHub"><i class="bx bxl-github"></i></a>
+                        {% endif %}
+                        {% if project.model != null %}
+                          <a href="{{project.model}}" target="_blank" data-glightbox="type: external" title=""><i class="bx bxl"></i></a>
+                        {% endif %}
                       </div>
                     </div>
                   </div>
