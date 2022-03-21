@@ -37,7 +37,7 @@ class Project(models.Model):
 	code = models.URLField(null=True, blank=True)
 	filter = models.CharField(default='filter-gd', max_length=30)
 	publish = models.BooleanField(default=True)
-	model = models.URLField(null=True)
+	model = models.URLField(null=True, blank=True)
 
 	def __str__(self):
 		return f"{self.title}"
